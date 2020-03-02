@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 
 # 接続に必要なオブジェクトを作る
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='!')
 
 token = 'THi5IsDuMMyaCCesSTOK3nQ4.Cl2FMQ.ThIsi5DUMMyAcc3s5ToKen7kKWs'
 
@@ -16,10 +16,15 @@ async def on_ready():
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
+
+#!msg ~~ と打った時にそのメッセージをそのまま返す
 @bot.command()
 async def msg(ctx,*,msg):
-  await ctx.send(msg)
+    #BOTは無視
+    if ctx.author.bot:
+        return
+    await ctx.send(msg)
 
+#BOTを起動
 if __name__ == '__main__':
     bot.run(token)
