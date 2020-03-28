@@ -1,5 +1,5 @@
 # discordのBOTのサンプル  
-[discord.py公式リファレンス](y.readthedocs.io)  
+[discord.py公式リファレンス](https://discordpy.readthedocs.io/en/latest/index.html)  
 discordでのヘルプは[こちら](https://discord.gg/QVt6pYR) のサーバーまで
 
 ## BOTの作り方  
