@@ -11,6 +11,7 @@ token = 'THi5IsDuMMyaCCesSTOK3nQ4.Cl2FMQ.ThIsi5DUMMyAcc3s5ToKen7kKWs'
 #BOTが起動したとき
 @bot.event
 async def on_ready():
+    #hogeのコグをロード
     hoge.setup(bot)
     print('起動しました！(\'◇\')ゞ')
 
