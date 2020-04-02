@@ -1,7 +1,8 @@
 #discordのライブラリをインポート
 import discord
 from discord.ext import commands
-
+#cogsのhogeをimport
+import cogs.hoge as hoge
 # 接続に必要なオブジェクトを作る
 bot = commands.Bot(command_prefix='!')
 
@@ -10,6 +11,7 @@ token = 'THi5IsDuMMyaCCesSTOK3nQ4.Cl2FMQ.ThIsi5DUMMyAcc3s5ToKen7kKWs'
 #BOTが起動したとき
 @bot.event
 async def on_ready():
+    hoge.setup(bot)
     print('起動しました！(\'◇\')ゞ')
 
 #ping コマンド
