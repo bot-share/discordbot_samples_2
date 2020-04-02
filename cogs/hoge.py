@@ -12,7 +12,7 @@ class hoge(commands.Cog):
         await ctx.send('hogehoge')
         
     @commands.Cog.listener()
-    async def on message(self, message):
+    async def on_message(self, message):
         if message.author.bot:
             return
         if message.content.startswith('/'):
