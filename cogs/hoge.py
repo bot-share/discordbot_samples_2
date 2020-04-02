@@ -10,6 +10,13 @@ class hoge(commands.Cog):
     async def ping(self, ctx):
         """ボットにPINGを送ります。"""
         await ctx.send('hogehoge')
+        
+    @commands.Cog.listener()
+    async def on message(self, message):
+        if message.author.bot:
+            return
+        if message.content.startswith('/'):
+            await message.channel.send(message.content)
 
 def setup(bot):
     bot.add_cog(hoge(bot))
